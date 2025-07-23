@@ -24,7 +24,7 @@ RUN rm ./target/release/deps/virtual_worker*
 RUN cargo build --release
 
 # Create a new stage and copy the binary from the builder stage
-FROM debian:bookworm-slim AS runner
+FROM debian:12.11-slim AS runner
 WORKDIR /app
 
 # Set the build argument for the app version number
